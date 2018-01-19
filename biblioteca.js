@@ -32,3 +32,15 @@ function desenha_grid(ctx, minor, major, stroke, fill) {
     }
     ctx.restore();
 }
+
+function desenha_pacman(ctx,x,y,raio,boca) {
+
+    var abertura = boca*0.2
+
+    ctx.beginPath();
+    ctx.arc(x, y, raio, (0.2-abertura) * Math.PI, (1.8+abertura) * Math.PI);
+    ctx.lineTo(x, y);
+    ctx.fillStyle = "yellow";
+    ctx.fill();
+    
+}
